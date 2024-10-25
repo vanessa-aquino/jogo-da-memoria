@@ -1,0 +1,111 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(325deg,
+    #03001e 0%, #7303c0 30%, #ec38bc 70%, #fdeff9 100%);
+    user-select: none; /* Para o usuario não conseguir selecionar o emoji*/
+}
+
+.container{
+    border: 4px solid rgba(0, 0, 0, 0);
+    height: 600px;
+    border-radius: 4px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    background: linear-gradient(325deg,
+    #03001e 0%, #7303c0 30%, #ec38bc 70%, #fdeff9 100%);
+    padding: 40px 60px;
+}
+
+@media(max-width: 600px) {
+    .container {
+        height: 500px;
+        border: none;
+    }
+}
+
+@media(max-width: 557px) {
+    .container {
+        height: 550px;
+        width: 400px;
+    }
+    h2 {
+        font-size: 0.3rem;
+        text-align: center;
+    }
+
+}
+
+h2{
+    font-size: 3em;
+    color: #ffffff;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.reset{
+    padding: 15px 20px;
+    width: 100%;
+    color: #fff;
+    background-color: #d31c87;
+    border: none;
+    font-size: 1.5em;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 600;
+    border-radius: 4px;
+}
+
+.reset:focus{
+    color:  #fff;
+    background-color:  #db8fff88;
+}
+
+.game{
+    width: 430px;
+    height: 430px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    transform-style: preserve-3d;
+    perspective: 500px;
+}
+
+.item{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #d31c87;
+    font-size: 3em;
+    transform: rotateY(180deg);
+    transition: 0.25s;
+}
+
+.item::after{ /* Para tampar as minhas cartas */
+    content: "";
+    position: absolute;
+    inset: 0; /* Sobrepor o meu item*/
+    background-color: #6a0677;
+    transition: 0.25s;
+    transform: rotateY(0deg);
+    backface-visibility: hidden;
+}
+
+.item.boxOpen{ /* Girar as cartas selecionadas */
+    transform: rotateY(0deg);
+}
+
+.boxOpen::after, .boxMatch::after{
+    transform: rotateY(180deg);
+}
