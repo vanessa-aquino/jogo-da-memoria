@@ -30,14 +30,21 @@ body{
     }
 }
 
-@media(max-width: 557px) {
+@media(max-width: 550px) {
     .container {
-        height: 550px;
+        height: 600px;
         width: 400px;
     }
     h2 {
+        margin-top: 10px;
         font-size: 0.3rem;
         text-align: center;
+    }
+
+    .game{
+        display: flex;
+        border: 1px solid rgba(179, 0, 0, 0);
+        justify-content: center;
     }
 
 }
