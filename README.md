@@ -14,7 +14,7 @@ Este é um projeto de jogo da memória desenvolvido como parte do bootcamp da DI
 - CSS: Estilização visual e animações, criando uma experiência imersiva.
 - JavaScript: Lógica do jogo, manipulação do DOM e controle das interações do usuário.
 ## 🚀 Como Jogar
-- Abra o jogo no navegador.
+- Abra o jogo no navegador. (https://vanessa-aquino.github.io/jogo-da-memoria/)
 - Clique em uma carta para revelá-la.
 - Em seguida, clique em outra carta. Se forem  iguais, o par ficará visível; caso contrário, ambas as cartas serão viradas novamente.
 - Continue virando as cartas até encontrar todos os pares!
